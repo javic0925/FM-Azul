@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FM Azul Radio</title>
     <link rel="stylesheet" href="/styles/style.css">
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="./js/player.js"></script>
+    <script src="./js/showTab.js"></script>
 </head> 
 
 <body>
-    <section class="main">
+    <section class="tab" id="main">
         <div id="imageGradient">
             <img class="mainBack" src="./assets/pexels-mike-b-114820.jpg" alt="">
         </div>
@@ -21,14 +22,16 @@
             <img id="shareIcon" src="./assets/Icons/iconmonstr-share-1.svg" alt="">
         </div>
         <div class="streamInfo">
-            <div id="track"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Are_You_Experienced_-_US_cover-edit.jpg" alt=""></div>
+            <div id="track"><img id="rbcloud_cover8827"  src="https://c15.radioboss.fm/w/artwork/449.png" alt=""></div>
             <div id="trackInfo">
-                <h3>80's Party Mix</h3>
+            <script src='https://c15.radioboss.fm/w/cover.js?u=449&amp;wid=8827'></script>
+                <h3 id="rbcloud_nowplaying16854"></h3>
                 <h5>FM Azul Radio</h5>
             </div>
+            <script src='https://c15.radioboss.fm/w/nowplaying.js?u=449&amp;wid=16854&amp;nl=1&amp;nnt=1'></script>
             <div id="listenerCount">
                 <img src="./assets/Icons/Listener.svg" alt="">
-                <h3>100</h3>
+                <h3 id="rbcloud_listeners16854"></h3>
             </div>
         </div>
         <div class="player">
@@ -41,9 +44,23 @@
             </audio>
 
     </section>
-    <section class="chat"></section>
-    <section class="info"></section>
-    <section class="footer"></section>
+    <section class="tab" id="chat">
+        <iframe src="https://www2.cbox.ws/box/?boxid=2388565&amp;boxtag=4xncwv" width="100%" height="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="auto"></iframe>
+    </section>
+    <section class="tab" id="info"></section>
+    <section class="footer">
+        <ul>
+            <li class="active">
+                <a class="yab" href="main"><img src="./assets/Icons/iconmonstr-home-7.svg" alt=""></a>
+            </li>
+            <li class="">
+                <a class="yab" href="chat"><img src="./assets/Icons/iconmonstr-speech-bubble-18.svg" alt=""></a>
+            </li>
+            <li class="">
+                <a class="yab" href="info"><img src="./assets/Icons/iconmonstr-info-12.svg" alt=""></a>
+            </li>
+        </ul>
+    </section>
 </body>
 
 </html>
