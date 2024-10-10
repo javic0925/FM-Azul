@@ -2,10 +2,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
+        <meta name="description" content="FM Azul Radio con los mejores éxitos, Innovamos para ti, disfruta de nuestra programación, bienvenido a nuestra gran familia FM Azul Radio.">
+        <meta name="author" content="FM Azul Radio">
+        <meta property="og:title" content="FM Azul Radio">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://ps.fmazulradio.com/">
+        <meta property="og:description" content="FM Azul Radio con los mejores éxitos, Innovamos para ti, disfruta de nuestra programación, bienvenido a nuestra gran familia FM Azul Radio.">
+        <meta property="og:image" content="">
+        <meta name="theme-color" content="#191919">    
     <title>FM Azul Radio</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="./assets/Icons/apple-touch-icon.png">
+    <link rel="shortcut icon" href="./assets/Icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/styles/style.css">
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="./js/player.js"></script>
@@ -18,8 +28,8 @@
             <img class="mainBack" src="./assets/pexels-mike-b-114820.jpg" alt="">
         </div>
         <div class="header">
-            <img id="logo" src="./assets/images/FMLogo.png" alt="FM Azul Radio Logo">
-            <img id="shareIcon" src="./assets/Icons/iconmonstr-share-1.svg" alt="">
+            <a href="https://ps.fmazulradio.app"><img id="logo" src="./assets/images/FMLogo.png" alt="FM Azul Radio Logo"></a>
+            <img class="share-button" src="./assets/Icons/iconmonstr-share-1.svg" alt="">
         </div>
         <div class="streamInfo">
             <div id="track"><img id="rbcloud_cover8827"  src="https://c15.radioboss.fm/w/artwork/449.png" alt=""></div>
@@ -44,23 +54,83 @@
             </audio>
 
     </section>
-    <section class="tab" id="chat">
-        <iframe src="https://www2.cbox.ws/box/?boxid=2388565&amp;boxtag=4xncwv" width="100%" height="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="auto"></iframe>
+    <section class="tab" id="info">
+
+        <div id="imageGradient">
+            <img class="mainBack" src="./assets/pexels-mike-b-114820.jpg" alt="">
+        </div>
+        <div class="header">
+            <img id="logo" src="./assets/images/FMLogo.png" alt="FM Azul Radio Logo">
+            <img id="shareIcon" src="./assets/Icons/iconmonstr-share-1.svg" alt="">
+        </div>
+
+        <div class="aboutUs">
+            <h2>FM Azul Radio</h2>
+            <p>FM Azul Radio con los mejores éxitos, Innovamos para ti, disfruta de nuestra programación, bienvenido a nuestra gran familia FM Azul Radio.</p>
+            <div id="socialMedia">
+                <a href="https://www.twitch.tv/fmazulradio" target="_blank"><img src="./assets/Icons/iconmonstr-twitch-3.svg" alt=""></a>
+
+                <a href="https://www.facebook.com/FMAZULRADIO/" target="_blank"><img src="./assets/Icons/iconmonstr-facebook-3.svg" alt=""></a>
+
+                <a href="https://www.instagram.com/fmazulradio/" target="_blank"><img src="./assets/Icons/iconmonstr-instagram-13.svg" alt=""></a>
+
+                <a href="https://twitter.com/fmazulradio" target="_blank"><img src="./assets/Icons/iconmonstr-twitter-3.svg" alt=""></a>
+            </div>
+        </div>
+
     </section>
-    <section class="tab" id="info"></section>
+    <section class="tab" id="events">
+
+        <div class="gallery">
+            <h2>Eventos</h2>
+        </div>
+
+        
+
+        
+
+    </section>
     <section class="footer">
         <ul>
             <li class="active">
                 <a class="yab" href="main"><img src="./assets/Icons/iconmonstr-home-7.svg" alt=""></a>
             </li>
             <li class="">
-                <a class="yab" href="chat"><img src="./assets/Icons/iconmonstr-speech-bubble-18.svg" alt=""></a>
+                <img class="chat" src="./assets/Icons/iconmonstr-speech-bubble-18.svg" alt="">
+            </li>
+            <li class="">
+                <a target="_blank" href="https://t.me/fmazulradiosv"><img src="./assets/Icons/iconmonstr-telegram-1.svg" alt=""></a>
+            </li>
+            <li class="">
+                <a class="yab" href="events"><img src="./assets/Icons/iconmonstr-calendar-9.svg" alt=""></a>
             </li>
             <li class="">
                 <a class="yab" href="info"><img src="./assets/Icons/iconmonstr-info-12.svg" alt=""></a>
             </li>
         </ul>
     </section>
+    <script src="./js/chatButton.js"></script>
+    <script src="./js/share.js"></script>
+    <script src="./js/gallery.js"></script>
+    <script>
+        setTimeout(showSlides,3500)
+        let slideIndex = 0;
+        showSlides();
+  
+        function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("imageBox");
+        console.log(slides);
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "flex";  
+        setTimeout(showSlides, 3000); // Change image every 2 seconds
+  }
+    </script>
+
 </body>
 
 </html>

@@ -22,7 +22,7 @@ $(function () {
     song.addEventListener('pause', function () {
         song.setAttribute('src' , 'https://c15.radioboss.fm:18449/stream');
         song.currentTime = 0;
-        $('#playback').attr('class', 'fa fa-play fa-lg');
+        $('#playback').attr('src', './assets/Icons/Play.svg');
     });
 
     
@@ -39,8 +39,8 @@ let mediaSession = navigator.mediaSession;
 
 if ("mediaSession" in navigator){
     navigator.mediaSession.metadata = new MediaMetadata({
-      title: "Radio",
-      artist: "FM AZUL",
-      album: "",
-      artwork: [{src: "#"}]
+      title: "FM AZUL Radio",
+      artist: "Innovamos para ti",
+      album: "Radio",
+      artwork: [{src: "https://fmazulradio.app/assets/Icons/FMAzulRadioM.png"}]
     });}
